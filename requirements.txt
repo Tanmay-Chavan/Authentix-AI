@@ -1,0 +1,70 @@
+# ─────────────────────────────────────────────────────────────
+# Authentix AI — Python Dependencies (Phase M1)
+# Python 3.11 | pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────
+
+# ── Core Web Framework ──
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+python-multipart==0.0.20
+
+# ── Database ──
+sqlalchemy[asyncio]==2.0.41
+asyncpg==0.30.0
+alembic==1.16.1
+
+# ── Validation / Settings ──
+pydantic==2.11.3
+pydantic-settings==2.9.1
+
+# ── Security ──
+python-jose[cryptography]==3.4.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.3.0
+
+# ── ML Core (CPU-first; GPU torch installed separately) ──
+numpy==1.26.4
+Pillow==11.2.1
+scikit-learn==1.6.1
+xgboost==3.0.0
+
+# ── ML Deep Learning (CPU versions for initial setup) ──
+# NOTE: PyTorch GPU version installed separately via:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+torch==2.7.1
+torchvision==0.22.1
+timm==1.0.15
+
+# ── CLIP ──
+open-clip-torch==2.31.0
+
+# ── Explainability ──
+shap==0.47.2
+captum==0.8.0
+
+# ── Video Processing ──
+# FFmpeg is a system dependency (installed via winget/choco)
+# opencv-python for frame extraction
+opencv-python-headless==4.11.0.86
+
+# ── URL Analysis ──
+tldextract==5.2.0
+python-whois==0.9.5
+requests==2.32.3
+
+# ── Metadata Extraction ──
+# ExifTool is a system dependency (deferred)
+
+# ── Utilities ──
+tqdm==4.67.1
+httpx==0.28.1
+tenacity==9.1.2
+python-dotenv==1.1.0
+
+# ── Linting / Quality ──
+ruff==0.11.12
+pytest==8.4.0
+pytest-asyncio==1.0.0
+
+# ── Logging ──
+structlog==25.4.0
